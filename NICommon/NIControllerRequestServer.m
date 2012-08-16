@@ -14,10 +14,7 @@
 
 - (NSData *)handleNISetAsciiStringMessage:(NISetAsciiStringMessage *)message;
 {
-    NIMessage * m = [NIDeviceStateChangeMessage messageWithDeviceState:YES];
-    
     [self.agent createNotificationClientWithName:message.string];
-    [self.agent.controllerNotificationClient sendMessage:m];
     
     uint32_t theTrue = 'true';
     return [NSData dataWithBytes:&theTrue length:sizeof(theTrue)];

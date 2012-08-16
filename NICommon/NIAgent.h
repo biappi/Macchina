@@ -16,6 +16,7 @@
 @property (readonly) NIMainHandlerServer       * mainHandlerServer;
 @property (readonly) NIControllerRequestServer * controllerRequestServer;
 @property (readonly) NIClient                  * controllerNotificationClient;
+@property (readonly) NIServer                  * controllerRequestMidiServer;
 
 - (void)scheduleInRunLoop:(NSRunLoop *)runloop;
 - (void)createNotificationClientWithName:(NSString *)name;

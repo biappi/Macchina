@@ -21,6 +21,8 @@
     _controllerRequestServer = [[NIControllerRequestServer alloc] initWithName:@"NIHWMaschineController0001Request"];
     _controllerRequestServer.agent = self;
     
+    _controllerRequestMidiServer = [[NIControllerRequestServer alloc] initWithName:@"NIHWMaschineController0001RequestMidi"];
+    
     return self;
 }
 
