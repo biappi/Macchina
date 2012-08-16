@@ -7,38 +7,101 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F02C85815DD078100A3EAE4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F02C85715DD078100A3EAE4 /* Foundation.framework */; };
-		3F02C85B15DD078100A3EAE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C85A15DD078100A3EAE4 /* main.m */; };
-		3F02C85F15DD078100A3EAE4 /* Macchina.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3F02C85E15DD078100A3EAE4 /* Macchina.1 */; };
+		3F02C86B15DD07CA00A3EAE4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F02C85715DD078100A3EAE4 /* Foundation.framework */; };
+		3F02C86E15DD07CA00A3EAE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C86D15DD07CA00A3EAE4 /* main.m */; };
+		3F02C87C15DD096300A3EAE4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F02C85715DD078100A3EAE4 /* Foundation.framework */; };
+		3F02C87F15DD096300A3EAE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C87E15DD096300A3EAE4 /* main.m */; };
+		3F02C89E15DD09CB00A3EAE4 /* NIAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C88915DD09CB00A3EAE4 /* NIAgent.m */; };
+		3F02C89F15DD09CB00A3EAE4 /* NIAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C88915DD09CB00A3EAE4 /* NIAgent.m */; };
+		3F02C8A015DD09CB00A3EAE4 /* NIMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C88B15DD09CB00A3EAE4 /* NIMessage.m */; };
+		3F02C8A115DD09CB00A3EAE4 /* NIMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C88B15DD09CB00A3EAE4 /* NIMessage.m */; };
+		3F02C8A215DD09CB00A3EAE4 /* NIServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C88D15DD09CB00A3EAE4 /* NIServer.m */; };
+		3F02C8A315DD09CB00A3EAE4 /* NIServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C88D15DD09CB00A3EAE4 /* NIServer.m */; };
+		3F02C8A415DD09CB00A3EAE4 /* NIMainHandlerServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C88F15DD09CB00A3EAE4 /* NIMainHandlerServer.m */; };
+		3F02C8A515DD09CB00A3EAE4 /* NIMainHandlerServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C88F15DD09CB00A3EAE4 /* NIMainHandlerServer.m */; };
+		3F02C8A615DD09CB00A3EAE4 /* NIControllerRequestServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C89115DD09CB00A3EAE4 /* NIControllerRequestServer.m */; };
+		3F02C8A715DD09CB00A3EAE4 /* NIControllerRequestServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C89115DD09CB00A3EAE4 /* NIControllerRequestServer.m */; };
+		3F02C8A815DD09CB00A3EAE4 /* NIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C89315DD09CB00A3EAE4 /* NIClient.m */; };
+		3F02C8A915DD09CB00A3EAE4 /* NIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C89315DD09CB00A3EAE4 /* NIClient.m */; };
+		3F02C8AA15DD09CB00A3EAE4 /* NIMainHandlerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C89515DD09CB00A3EAE4 /* NIMainHandlerClient.m */; };
+		3F02C8AB15DD09CB00A3EAE4 /* NIMainHandlerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C89515DD09CB00A3EAE4 /* NIMainHandlerClient.m */; };
+		3F02C8AC15DD09CB00A3EAE4 /* NIResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C89715DD09CB00A3EAE4 /* NIResponse.m */; };
+		3F02C8AD15DD09CB00A3EAE4 /* NIResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C89715DD09CB00A3EAE4 /* NIResponse.m */; };
+		3F02C8AE15DD09CB00A3EAE4 /* NIAgentClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C89915DD09CB00A3EAE4 /* NIAgentClient.m */; };
+		3F02C8AF15DD09CB00A3EAE4 /* NIAgentClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C89915DD09CB00A3EAE4 /* NIAgentClient.m */; };
+		3F02C8B015DD09CB00A3EAE4 /* NIControllerRequestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C89B15DD09CB00A3EAE4 /* NIControllerRequestClient.m */; };
+		3F02C8B115DD09CB00A3EAE4 /* NIControllerRequestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C89B15DD09CB00A3EAE4 /* NIControllerRequestClient.m */; };
+		3F02C8B215DD09CB00A3EAE4 /* NIControllerNotificationServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C89D15DD09CB00A3EAE4 /* NIControllerNotificationServer.m */; };
+		3F02C8B315DD09CB00A3EAE4 /* NIControllerNotificationServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C89D15DD09CB00A3EAE4 /* NIControllerNotificationServer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3F02C85115DD078100A3EAE4 /* CopyFiles */ = {
+		3F02C86715DD07CA00A3EAE4 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				3F02C85F15DD078100A3EAE4 /* Macchina.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		3F02C87815DD096300A3EAE4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3F02C85315DD078100A3EAE4 /* Macchina */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Macchina; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F02C85715DD078100A3EAE4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		3F02C85A15DD078100A3EAE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3F02C85D15DD078100A3EAE4 /* Macchina-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Macchina-Prefix.pch"; sourceTree = "<group>"; };
-		3F02C85E15DD078100A3EAE4 /* Macchina.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Macchina.1; sourceTree = "<group>"; };
+		3F02C86915DD07CA00A3EAE4 /* MacchinaClient */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MacchinaClient; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F02C86D15DD07CA00A3EAE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3F02C87015DD07CA00A3EAE4 /* MacchinaClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MacchinaClient-Prefix.pch"; sourceTree = "<group>"; };
+		3F02C87A15DD096300A3EAE4 /* MacchinaServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MacchinaServer; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F02C87E15DD096300A3EAE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3F02C88115DD096300A3EAE4 /* MacchinaServer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MacchinaServer-Prefix.pch"; sourceTree = "<group>"; };
+		3F02C88815DD09CB00A3EAE4 /* NIAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIAgent.h; sourceTree = "<group>"; };
+		3F02C88915DD09CB00A3EAE4 /* NIAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIAgent.m; sourceTree = "<group>"; };
+		3F02C88A15DD09CB00A3EAE4 /* NIMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMessage.h; sourceTree = "<group>"; };
+		3F02C88B15DD09CB00A3EAE4 /* NIMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMessage.m; sourceTree = "<group>"; };
+		3F02C88C15DD09CB00A3EAE4 /* NIServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIServer.h; sourceTree = "<group>"; };
+		3F02C88D15DD09CB00A3EAE4 /* NIServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIServer.m; sourceTree = "<group>"; };
+		3F02C88E15DD09CB00A3EAE4 /* NIMainHandlerServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMainHandlerServer.h; sourceTree = "<group>"; };
+		3F02C88F15DD09CB00A3EAE4 /* NIMainHandlerServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMainHandlerServer.m; sourceTree = "<group>"; };
+		3F02C89015DD09CB00A3EAE4 /* NIControllerRequestServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIControllerRequestServer.h; sourceTree = "<group>"; };
+		3F02C89115DD09CB00A3EAE4 /* NIControllerRequestServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIControllerRequestServer.m; sourceTree = "<group>"; };
+		3F02C89215DD09CB00A3EAE4 /* NIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIClient.h; sourceTree = "<group>"; };
+		3F02C89315DD09CB00A3EAE4 /* NIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIClient.m; sourceTree = "<group>"; };
+		3F02C89415DD09CB00A3EAE4 /* NIMainHandlerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMainHandlerClient.h; sourceTree = "<group>"; };
+		3F02C89515DD09CB00A3EAE4 /* NIMainHandlerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMainHandlerClient.m; sourceTree = "<group>"; };
+		3F02C89615DD09CB00A3EAE4 /* NIResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIResponse.h; sourceTree = "<group>"; };
+		3F02C89715DD09CB00A3EAE4 /* NIResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIResponse.m; sourceTree = "<group>"; };
+		3F02C89815DD09CB00A3EAE4 /* NIAgentClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIAgentClient.h; sourceTree = "<group>"; };
+		3F02C89915DD09CB00A3EAE4 /* NIAgentClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIAgentClient.m; sourceTree = "<group>"; };
+		3F02C89A15DD09CB00A3EAE4 /* NIControllerRequestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIControllerRequestClient.h; sourceTree = "<group>"; };
+		3F02C89B15DD09CB00A3EAE4 /* NIControllerRequestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIControllerRequestClient.m; sourceTree = "<group>"; };
+		3F02C89C15DD09CB00A3EAE4 /* NIControllerNotificationServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIControllerNotificationServer.h; sourceTree = "<group>"; };
+		3F02C89D15DD09CB00A3EAE4 /* NIControllerNotificationServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIControllerNotificationServer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3F02C85015DD078100A3EAE4 /* Frameworks */ = {
+		3F02C86615DD07CA00A3EAE4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F02C85815DD078100A3EAE4 /* Foundation.framework in Frameworks */,
+				3F02C86B15DD07CA00A3EAE4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F02C87715DD096300A3EAE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F02C87C15DD096300A3EAE4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,7 +111,9 @@
 		3F02C84815DD078100A3EAE4 = {
 			isa = PBXGroup;
 			children = (
-				3F02C85915DD078100A3EAE4 /* Macchina */,
+				3F02C88715DD09AB00A3EAE4 /* NICommon */,
+				3F02C86C15DD07CA00A3EAE4 /* MacchinaClient */,
+				3F02C87D15DD096300A3EAE4 /* MacchinaServer */,
 				3F02C85615DD078100A3EAE4 /* Frameworks */,
 				3F02C85415DD078100A3EAE4 /* Products */,
 			);
@@ -57,7 +122,8 @@
 		3F02C85415DD078100A3EAE4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3F02C85315DD078100A3EAE4 /* Macchina */,
+				3F02C86915DD07CA00A3EAE4 /* MacchinaClient */,
+				3F02C87A15DD096300A3EAE4 /* MacchinaServer */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,42 +136,104 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3F02C85915DD078100A3EAE4 /* Macchina */ = {
+		3F02C86C15DD07CA00A3EAE4 /* MacchinaClient */ = {
 			isa = PBXGroup;
 			children = (
-				3F02C85A15DD078100A3EAE4 /* main.m */,
-				3F02C85E15DD078100A3EAE4 /* Macchina.1 */,
-				3F02C85C15DD078100A3EAE4 /* Supporting Files */,
+				3F02C86D15DD07CA00A3EAE4 /* main.m */,
+				3F02C86F15DD07CA00A3EAE4 /* Supporting Files */,
 			);
-			path = Macchina;
+			path = MacchinaClient;
 			sourceTree = "<group>";
 		};
-		3F02C85C15DD078100A3EAE4 /* Supporting Files */ = {
+		3F02C86F15DD07CA00A3EAE4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3F02C85D15DD078100A3EAE4 /* Macchina-Prefix.pch */,
+				3F02C87015DD07CA00A3EAE4 /* MacchinaClient-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3F02C87D15DD096300A3EAE4 /* MacchinaServer */ = {
+			isa = PBXGroup;
+			children = (
+				3F02C87E15DD096300A3EAE4 /* main.m */,
+				3F02C88015DD096300A3EAE4 /* Supporting Files */,
+			);
+			path = MacchinaServer;
+			sourceTree = "<group>";
+		};
+		3F02C88015DD096300A3EAE4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3F02C88115DD096300A3EAE4 /* MacchinaServer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3F02C88715DD09AB00A3EAE4 /* NICommon */ = {
+			isa = PBXGroup;
+			children = (
+				3F02C88815DD09CB00A3EAE4 /* NIAgent.h */,
+				3F02C88915DD09CB00A3EAE4 /* NIAgent.m */,
+				3F02C88A15DD09CB00A3EAE4 /* NIMessage.h */,
+				3F02C88B15DD09CB00A3EAE4 /* NIMessage.m */,
+				3F02C88C15DD09CB00A3EAE4 /* NIServer.h */,
+				3F02C88D15DD09CB00A3EAE4 /* NIServer.m */,
+				3F02C88E15DD09CB00A3EAE4 /* NIMainHandlerServer.h */,
+				3F02C88F15DD09CB00A3EAE4 /* NIMainHandlerServer.m */,
+				3F02C89015DD09CB00A3EAE4 /* NIControllerRequestServer.h */,
+				3F02C89115DD09CB00A3EAE4 /* NIControllerRequestServer.m */,
+				3F02C89215DD09CB00A3EAE4 /* NIClient.h */,
+				3F02C89315DD09CB00A3EAE4 /* NIClient.m */,
+				3F02C89415DD09CB00A3EAE4 /* NIMainHandlerClient.h */,
+				3F02C89515DD09CB00A3EAE4 /* NIMainHandlerClient.m */,
+				3F02C89615DD09CB00A3EAE4 /* NIResponse.h */,
+				3F02C89715DD09CB00A3EAE4 /* NIResponse.m */,
+				3F02C89815DD09CB00A3EAE4 /* NIAgentClient.h */,
+				3F02C89915DD09CB00A3EAE4 /* NIAgentClient.m */,
+				3F02C89A15DD09CB00A3EAE4 /* NIControllerRequestClient.h */,
+				3F02C89B15DD09CB00A3EAE4 /* NIControllerRequestClient.m */,
+				3F02C89C15DD09CB00A3EAE4 /* NIControllerNotificationServer.h */,
+				3F02C89D15DD09CB00A3EAE4 /* NIControllerNotificationServer.m */,
+			);
+			path = NICommon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3F02C85215DD078100A3EAE4 /* Macchina */ = {
+		3F02C86815DD07CA00A3EAE4 /* MacchinaClient */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3F02C86215DD078100A3EAE4 /* Build configuration list for PBXNativeTarget "Macchina" */;
+			buildConfigurationList = 3F02C87315DD07CA00A3EAE4 /* Build configuration list for PBXNativeTarget "MacchinaClient" */;
 			buildPhases = (
-				3F02C84F15DD078100A3EAE4 /* Sources */,
-				3F02C85015DD078100A3EAE4 /* Frameworks */,
-				3F02C85115DD078100A3EAE4 /* CopyFiles */,
+				3F02C86515DD07CA00A3EAE4 /* Sources */,
+				3F02C86615DD07CA00A3EAE4 /* Frameworks */,
+				3F02C86715DD07CA00A3EAE4 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Macchina;
-			productName = Macchina;
-			productReference = 3F02C85315DD078100A3EAE4 /* Macchina */;
+			name = MacchinaClient;
+			productName = MacchinaClient;
+			productReference = 3F02C86915DD07CA00A3EAE4 /* MacchinaClient */;
+			productType = "com.apple.product-type.tool";
+		};
+		3F02C87915DD096300A3EAE4 /* MacchinaServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F02C88415DD096300A3EAE4 /* Build configuration list for PBXNativeTarget "MacchinaServer" */;
+			buildPhases = (
+				3F02C87615DD096300A3EAE4 /* Sources */,
+				3F02C87715DD096300A3EAE4 /* Frameworks */,
+				3F02C87815DD096300A3EAE4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacchinaServer;
+			productName = MacchinaServer;
+			productReference = 3F02C87A15DD096300A3EAE4 /* MacchinaServer */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -129,17 +257,48 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3F02C85215DD078100A3EAE4 /* Macchina */,
+				3F02C86815DD07CA00A3EAE4 /* MacchinaClient */,
+				3F02C87915DD096300A3EAE4 /* MacchinaServer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3F02C84F15DD078100A3EAE4 /* Sources */ = {
+		3F02C86515DD07CA00A3EAE4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F02C85B15DD078100A3EAE4 /* main.m in Sources */,
+				3F02C86E15DD07CA00A3EAE4 /* main.m in Sources */,
+				3F02C89E15DD09CB00A3EAE4 /* NIAgent.m in Sources */,
+				3F02C8A015DD09CB00A3EAE4 /* NIMessage.m in Sources */,
+				3F02C8A215DD09CB00A3EAE4 /* NIServer.m in Sources */,
+				3F02C8A415DD09CB00A3EAE4 /* NIMainHandlerServer.m in Sources */,
+				3F02C8A615DD09CB00A3EAE4 /* NIControllerRequestServer.m in Sources */,
+				3F02C8A815DD09CB00A3EAE4 /* NIClient.m in Sources */,
+				3F02C8AA15DD09CB00A3EAE4 /* NIMainHandlerClient.m in Sources */,
+				3F02C8AC15DD09CB00A3EAE4 /* NIResponse.m in Sources */,
+				3F02C8AE15DD09CB00A3EAE4 /* NIAgentClient.m in Sources */,
+				3F02C8B015DD09CB00A3EAE4 /* NIControllerRequestClient.m in Sources */,
+				3F02C8B215DD09CB00A3EAE4 /* NIControllerNotificationServer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F02C87615DD096300A3EAE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F02C87F15DD096300A3EAE4 /* main.m in Sources */,
+				3F02C89F15DD09CB00A3EAE4 /* NIAgent.m in Sources */,
+				3F02C8A115DD09CB00A3EAE4 /* NIMessage.m in Sources */,
+				3F02C8A315DD09CB00A3EAE4 /* NIServer.m in Sources */,
+				3F02C8A515DD09CB00A3EAE4 /* NIMainHandlerServer.m in Sources */,
+				3F02C8A715DD09CB00A3EAE4 /* NIControllerRequestServer.m in Sources */,
+				3F02C8A915DD09CB00A3EAE4 /* NIClient.m in Sources */,
+				3F02C8AB15DD09CB00A3EAE4 /* NIMainHandlerClient.m in Sources */,
+				3F02C8AD15DD09CB00A3EAE4 /* NIResponse.m in Sources */,
+				3F02C8AF15DD09CB00A3EAE4 /* NIAgentClient.m in Sources */,
+				3F02C8B115DD09CB00A3EAE4 /* NIControllerRequestClient.m in Sources */,
+				3F02C8B315DD09CB00A3EAE4 /* NIControllerNotificationServer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,20 +354,42 @@
 			};
 			name = Release;
 		};
-		3F02C86315DD078100A3EAE4 /* Debug */ = {
+		3F02C87415DD07CA00A3EAE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Macchina/Macchina-Prefix.pch";
+				GCC_PREFIX_HEADER = "MacchinaClient/MacchinaClient-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		3F02C86415DD078100A3EAE4 /* Release */ = {
+		3F02C87515DD07CA00A3EAE4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Macchina/Macchina-Prefix.pch";
+				GCC_PREFIX_HEADER = "MacchinaClient/MacchinaClient-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3F02C88515DD096300A3EAE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MacchinaServer/MacchinaServer-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3F02C88615DD096300A3EAE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MacchinaServer/MacchinaServer-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -225,11 +406,19 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3F02C86215DD078100A3EAE4 /* Build configuration list for PBXNativeTarget "Macchina" */ = {
+		3F02C87315DD07CA00A3EAE4 /* Build configuration list for PBXNativeTarget "MacchinaClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3F02C86315DD078100A3EAE4 /* Debug */,
-				3F02C86415DD078100A3EAE4 /* Release */,
+				3F02C87415DD07CA00A3EAE4 /* Debug */,
+				3F02C87515DD07CA00A3EAE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3F02C88415DD096300A3EAE4 /* Build configuration list for PBXNativeTarget "MacchinaServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F02C88515DD096300A3EAE4 /* Debug */,
+				3F02C88615DD096300A3EAE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
