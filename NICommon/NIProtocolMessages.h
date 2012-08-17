@@ -53,3 +53,15 @@
 @property uint32_t   boh2;
 @property NSArray  * events;
 @end
+
+@interface NIPadsChangedEvent : NSObject
+@property uint32_t padId;
+@property uint32_t eventState;
+@property float pressure;
+@end
+
+@interface NIPadsChangedMessage : NIMessage
+@property uint32_t   boh1;
+@property uint32_t   boh2;
+@property NSArray  * events;
+@end

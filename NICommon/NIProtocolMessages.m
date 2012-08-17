@@ -221,3 +221,56 @@
 }
 
 @end
+
+@implementation NIPadsChangedEvent
+
+- (NSString *)description;
+{
+    return [NSString stringWithFormat:@"{%d, %d, %f}", self.padId, self.eventState, self.pressure];
+}
+
+@end
+
+@implementation NIPadsChangedMessage
+
++ (NIMessage *)messageFromData:(NSData *)data;
+{
+    NIPadsChangedMessage * m = [[self class] new];
+    const void * bytes = data.bytes;
+    
+    m.boh1   = *(uint32_t *)(bytes + 0x04);
+    m.boh2   = *(uint32_t *)(bytes + 0x08);
+    
+    uint32_t   numberOfEvents = *(uint32_t *)(bytes + 0x0c);
+    uint32_t * eventsList     =  (uint32_t *)(bytes + 0x10);
+    
+    NSMutableArray * events = [NSMutableArray arrayWithCapacity:numberOfEvents];
+    
+    for (int i = 0; i < numberOfEvents; i++)
+    {
+        NIPadsChangedEvent * e = [NIPadsChangedEvent new];
+        e.padId = eventsList[i * 3];
+        e.eventState = eventsList[i * 3 + 1];
+        e.pressure   = ((float *)eventsList)[i * 2 + 2];
+        [events addObject:e];
+    }
+    
+    m.events = events;
+    
+    return m;
+}
+
+- (NSString *)description;
+{
+    NSMutableArray * descs = [NSMutableArray arrayWithCapacity:self.events.count];
+    for (NIWheelsChangedEvent * e in self.events)
+        [descs addObject:[e description]];
+    
+    return [NSString stringWithFormat:@"%@ - boh1: %08x, boh2: %08x, [%@]",
+            [super description],
+            self.boh1,
+            self.boh2,
+            [descs componentsJoinedByString:@", "]];
+}
+
+@end
