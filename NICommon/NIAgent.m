@@ -9,6 +9,7 @@
 #import "NIAgent.h"
 #import "NIMainHandlerServer.h"
 #import "NIControllerRequestServer.h"
+#import "NIProtocolMessages.h"
 
 @implementation NIAgent
 
@@ -35,6 +36,14 @@
 - (void)createNotificationClientWithName:(NSString *)name;
 {
     _controllerNotificationClient = [[NIClient alloc] initWithName:name];
+    
+    [self performSelector:@selector(puppa) withObject:nil afterDelay:5];
+}
+
+- (void)puppa;
+{
+    [self.controllerNotificationClient sendMessage:[NIDeviceStateChangeMessage messageWithBool:YES]];
+    [self.controllerNotificationClient sendMessage:[NISetFocusMessage messageWithBool:YES]];
 }
 
 @end

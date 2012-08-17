@@ -12,6 +12,7 @@
 @interface NIGetDeviceAvailableMessage : NIPlainMessage       @end
 @interface NIDeviceStateChangeMessage  : NINumberValueMessage @end
 @interface NIGetDeviceEnabledMessage   : NINumberValueMessage @end
+@interface NISetFocusMessage           : NINumberValueMessage @end
 
 @interface NIDeviceConnectMessage : NIMessage
 @property uint32_t   controllerId;
@@ -25,4 +26,3 @@
 @property uint32_t   boh2;
 @property NSString * string;
 @end
-

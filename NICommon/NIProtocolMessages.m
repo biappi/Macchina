@@ -12,6 +12,7 @@
 @implementation NIGetDeviceEnabledMessage   @end
 @implementation NIGetServiceVersionMessage  @end
 @implementation NIGetDeviceAvailableMessage @end
+@implementation NISetFocusMessage           @end
 
 @implementation NIDeviceConnectMessage
 

@@ -24,6 +24,7 @@ MessageIdToString MessageIdToStringTable[] = {
     { 0x02446724, @"NIGetDeviceEnabledMessage"   },
     { 0x02444e00, @"NIDeviceStateChangeMessage"  },
     { 0x02446743, @"NIGetDeviceAvailableMessage" },
+    { 0x02434e00, @"NISetFocusMessage"           },
 };
 
 @implementation NIMessage
