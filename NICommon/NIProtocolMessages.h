@@ -8,11 +8,18 @@
 
 #import "NIMessageBases.h"
 
-@interface NIGetServiceVersionMessage  : NIPlainMessage       @end
-@interface NIGetDeviceAvailableMessage : NIPlainMessage       @end
-@interface NIDeviceStateChangeMessage  : NINumberValueMessage @end
-@interface NIGetDeviceEnabledMessage   : NINumberValueMessage @end
-@interface NISetFocusMessage           : NINumberValueMessage @end
+@interface NIGetServiceVersionMessage   : NIPlainMessage       @end
+@interface NIGetDriverVersionMessage    : NIPlainMessage       @end
+@interface NIGetFirmwareVersionMessage  : NIPlainMessage       @end
+@interface NIGetSerialNumberMessage     : NIPlainMessage       @end
+@interface NIGetDeviceAvailableMessage  : NIPlainMessage       @end
+@interface NIDeviceStateChangeMessage   : NINumberValueMessage @end
+@interface NIGetDisplayInvertedMessage  : NINumberValueMessage @end
+@interface NIGetDisplayContrastMessage  : NINumberValueMessage @end
+@interface NIGetDisplayBacklightMessage : NINumberValueMessage @end
+@interface NIGetFloatPropertyMessage    : NINumberValueMessage @end
+@interface NIGetDeviceEnabledMessage    : NINumberValueMessage @end
+@interface NISetFocusMessage            : NINumberValueMessage @end
 
 @interface NIDeviceConnectMessage : NIMessage
 @property uint32_t   controllerId;

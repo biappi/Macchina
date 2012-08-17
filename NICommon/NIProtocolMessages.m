@@ -8,11 +8,18 @@
 
 #import "NIProtocolMessages.h"
 
-@implementation NIDeviceStateChangeMessage  @end
-@implementation NIGetDeviceEnabledMessage   @end
-@implementation NIGetServiceVersionMessage  @end
-@implementation NIGetDeviceAvailableMessage @end
-@implementation NISetFocusMessage           @end
+@implementation NIDeviceStateChangeMessage   @end
+@implementation NIGetDeviceEnabledMessage    @end
+@implementation NIGetServiceVersionMessage   @end
+@implementation NIGetDeviceAvailableMessage  @end
+@implementation NISetFocusMessage            @end
+@implementation NIGetDriverVersionMessage    @end
+@implementation NIGetFirmwareVersionMessage  @end
+@implementation NIGetSerialNumberMessage     @end
+@implementation NIGetDisplayInvertedMessage  @end
+@implementation NIGetDisplayContrastMessage  @end
+@implementation NIGetDisplayBacklightMessage @end
+@implementation NIGetFloatPropertyMessage    @end
 
 @implementation NIDeviceConnectMessage
 

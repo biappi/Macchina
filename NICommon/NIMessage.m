@@ -18,13 +18,20 @@ Class    ClassForMessageID(uint32_t messageId);
 uint32_t MessageIDForClass(Class aClass);
 
 MessageIdToString MessageIdToStringTable[] = {
-    { 0x02536756, @"NIGetServiceVersionMessage"  },
-    { 0x02444300, @"NIDeviceConnectMessage"      },
-    { 0x02404300, @"NISetAsciiStringMessage"     },
-    { 0x02446724, @"NIGetDeviceEnabledMessage"   },
-    { 0x02444e00, @"NIDeviceStateChangeMessage"  },
-    { 0x02446743, @"NIGetDeviceAvailableMessage" },
-    { 0x02434e00, @"NISetFocusMessage"           },
+    { 0x02536756, @"NIGetServiceVersionMessage"   },
+    { 0x02444300, @"NIDeviceConnectMessage"       },
+    { 0x02404300, @"NISetAsciiStringMessage"      },
+    { 0x02446724, @"NIGetDeviceEnabledMessage"    },
+    { 0x02444e00, @"NIDeviceStateChangeMessage"   },
+    { 0x02446743, @"NIGetDeviceAvailableMessage"  },
+    { 0x02434e00, @"NISetFocusMessage"            },
+    { 0x02446744, @"NIGetDriverVersionMessage"    },
+    { 0x02436746, @"NIGetFirmwareVersionMessage"  },
+    { 0x02436753, @"NIGetSerialNumberMessage"     },
+    { 0x02646749, @"NIGetDisplayInvertedMessage"  },
+    { 0x02646743, @"NIGetDisplayContrastMessage"  },
+    { 0x02646742, @"NIGetDisplayBacklightMessage" },
+    { 0x02566766, @"NIGetFloatPropertyMessage"    },
 };
 
 @implementation NIMessage
