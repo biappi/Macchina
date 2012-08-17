@@ -33,6 +33,10 @@
 		3F02C8B115DD09CB00A3EAE4 /* NIControllerRequestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C89B15DD09CB00A3EAE4 /* NIControllerRequestClient.m */; };
 		3F02C8B215DD09CB00A3EAE4 /* NIControllerNotificationServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C89D15DD09CB00A3EAE4 /* NIControllerNotificationServer.m */; };
 		3F02C8B315DD09CB00A3EAE4 /* NIControllerNotificationServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02C89D15DD09CB00A3EAE4 /* NIControllerNotificationServer.m */; };
+		3FDBEE4D15DDFF6B006F73AF /* NIProtocolMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDBEE4C15DDFF6B006F73AF /* NIProtocolMessages.m */; };
+		3FDBEE4E15DDFF6B006F73AF /* NIProtocolMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDBEE4C15DDFF6B006F73AF /* NIProtocolMessages.m */; };
+		3FDBEE5115DDFF90006F73AF /* NIMessageBases.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDBEE5015DDFF90006F73AF /* NIMessageBases.m */; };
+		3FDBEE5215DDFF90006F73AF /* NIMessageBases.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDBEE5015DDFF90006F73AF /* NIMessageBases.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -86,6 +90,10 @@
 		3F02C89B15DD09CB00A3EAE4 /* NIControllerRequestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIControllerRequestClient.m; sourceTree = "<group>"; };
 		3F02C89C15DD09CB00A3EAE4 /* NIControllerNotificationServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIControllerNotificationServer.h; sourceTree = "<group>"; };
 		3F02C89D15DD09CB00A3EAE4 /* NIControllerNotificationServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIControllerNotificationServer.m; sourceTree = "<group>"; };
+		3FDBEE4B15DDFF6B006F73AF /* NIProtocolMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIProtocolMessages.h; sourceTree = "<group>"; };
+		3FDBEE4C15DDFF6B006F73AF /* NIProtocolMessages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIProtocolMessages.m; sourceTree = "<group>"; };
+		3FDBEE4F15DDFF90006F73AF /* NIMessageBases.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMessageBases.h; sourceTree = "<group>"; };
+		3FDBEE5015DDFF90006F73AF /* NIMessageBases.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMessageBases.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +185,10 @@
 				3F02C88915DD09CB00A3EAE4 /* NIAgent.m */,
 				3F02C88A15DD09CB00A3EAE4 /* NIMessage.h */,
 				3F02C88B15DD09CB00A3EAE4 /* NIMessage.m */,
+				3FDBEE4F15DDFF90006F73AF /* NIMessageBases.h */,
+				3FDBEE5015DDFF90006F73AF /* NIMessageBases.m */,
+				3FDBEE4B15DDFF6B006F73AF /* NIProtocolMessages.h */,
+				3FDBEE4C15DDFF6B006F73AF /* NIProtocolMessages.m */,
 				3F02C88C15DD09CB00A3EAE4 /* NIServer.h */,
 				3F02C88D15DD09CB00A3EAE4 /* NIServer.m */,
 				3F02C88E15DD09CB00A3EAE4 /* NIMainHandlerServer.h */,
@@ -280,6 +292,8 @@
 				3F02C8AE15DD09CB00A3EAE4 /* NIAgentClient.m in Sources */,
 				3F02C8B015DD09CB00A3EAE4 /* NIControllerRequestClient.m in Sources */,
 				3F02C8B215DD09CB00A3EAE4 /* NIControllerNotificationServer.m in Sources */,
+				3FDBEE4D15DDFF6B006F73AF /* NIProtocolMessages.m in Sources */,
+				3FDBEE5115DDFF90006F73AF /* NIMessageBases.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +313,8 @@
 				3F02C8AF15DD09CB00A3EAE4 /* NIAgentClient.m in Sources */,
 				3F02C8B115DD09CB00A3EAE4 /* NIControllerRequestClient.m in Sources */,
 				3F02C8B315DD09CB00A3EAE4 /* NIControllerNotificationServer.m in Sources */,
+				3FDBEE4E15DDFF6B006F73AF /* NIProtocolMessages.m in Sources */,
+				3FDBEE5215DDFF90006F73AF /* NIMessageBases.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

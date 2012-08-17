@@ -7,7 +7,7 @@
 //
 
 #import "NIMainHandlerServer.h"
-#import "NIMessage.h"
+#import "NIProtocolMessages.h"
 
 @implementation NIMainHandlerServer
 

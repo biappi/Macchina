@@ -8,6 +8,7 @@
 
 #import "NIControllerRequestClient.h"
 #import "NIResponse.h"
+#import "NIProtocolMessages.h"
 
 @implementation NIControllerRequestClient
 

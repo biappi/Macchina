@@ -7,7 +7,7 @@
 //
 
 #import "NIControllerRequestServer.h"
-#import "NIMessage.h"
+#import "NIProtocolMessages.h"
 #import "NIAgent.h"
 
 @implementation NIControllerRequestServer

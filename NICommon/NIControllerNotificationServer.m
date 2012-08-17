@@ -7,13 +7,12 @@
 //
 
 #import "NIControllerNotificationServer.h"
-#import "NIMessage.h"
+#import "NIProtocolMessages.h"
 
 @implementation NIControllerNotificationServer
 
 - (NSData *)handleNIDeviceStateChangeMessage:(NIDeviceStateChangeMessage *)stateChange;
 {
-    NSLog(@" - DEVICE IS NOW %@", stateChange.deviceState ? @"on" : @"off");
     return nil;
 }
 
