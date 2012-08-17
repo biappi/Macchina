@@ -127,3 +127,45 @@
 }
 
 @end
+
+@implementation NIDisplayDrawMessage : NIMessage
+
+- (NSData *)dataRepresentation;
+{
+    struct packet {
+        uint32_t msgid;
+        uint32_t dispn;
+        uint16_t y;
+        uint16_t x;
+        uint16_t h;
+        uint16_t w;
+        uint32_t size;
+    };
+    
+    struct packet p;
+    p.msgid = self.messageId;
+    p.dispn = self.displayNumber | 0x10000000;
+    p.x = self.originX;
+    p.y = self.originY;
+    p.w = self.sizeWidth;
+    p.h = self.sizeHeight;
+    p.size = (uint32_t)self.st7529EncodedImage.length;
+    
+    NSMutableData * data = [NSMutableData dataWithBytes:&p length:sizeof(struct packet)];
+    [data appendData:self.st7529EncodedImage];
+    
+    return data;
+}
+
+- (NSString *)description;
+{
+    return [NSString stringWithFormat:@"%@ - display: %d, rect: {%d, %d, %d, %d}",
+            [super description],
+            self.displayNumber,
+            self.originX,
+            self.originY,
+            self.sizeWidth,
+            self.sizeHeight];
+}
+
+@end

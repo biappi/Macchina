@@ -33,3 +33,12 @@
 @property uint32_t   boh2;
 @property NSString * string;
 @end
+
+@interface NIDisplayDrawMessage : NIMessage
+@property uint32_t   displayNumber;
+@property uint16_t   originX;
+@property uint16_t   originY;
+@property uint16_t   sizeWidth;
+@property uint16_t   sizeHeight;
+@property NSData   * st7529EncodedImage;
+@end

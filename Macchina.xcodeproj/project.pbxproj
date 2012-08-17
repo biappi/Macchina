@@ -37,6 +37,8 @@
 		3FDBEE4E15DDFF6B006F73AF /* NIProtocolMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDBEE4C15DDFF6B006F73AF /* NIProtocolMessages.m */; };
 		3FDBEE5115DDFF90006F73AF /* NIMessageBases.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDBEE5015DDFF90006F73AF /* NIMessageBases.m */; };
 		3FDBEE5215DDFF90006F73AF /* NIMessageBases.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDBEE5015DDFF90006F73AF /* NIMessageBases.m */; };
+		3FDBEE5815DE5B6E006F73AF /* NIImageConversions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDBEE5715DE5B6E006F73AF /* NIImageConversions.m */; };
+		3FDBEE5915DE5B6E006F73AF /* NIImageConversions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDBEE5715DE5B6E006F73AF /* NIImageConversions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -94,6 +96,9 @@
 		3FDBEE4C15DDFF6B006F73AF /* NIProtocolMessages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIProtocolMessages.m; sourceTree = "<group>"; };
 		3FDBEE4F15DDFF90006F73AF /* NIMessageBases.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMessageBases.h; sourceTree = "<group>"; };
 		3FDBEE5015DDFF90006F73AF /* NIMessageBases.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMessageBases.m; sourceTree = "<group>"; };
+		3FDBEE5615DE5B6E006F73AF /* NIImageConversions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIImageConversions.h; sourceTree = "<group>"; };
+		3FDBEE5715DE5B6E006F73AF /* NIImageConversions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIImageConversions.m; sourceTree = "<group>"; };
+		3FFC763D15DE7707007083F3 /* TestImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestImage.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +212,9 @@
 				3F02C89B15DD09CB00A3EAE4 /* NIControllerRequestClient.m */,
 				3F02C89C15DD09CB00A3EAE4 /* NIControllerNotificationServer.h */,
 				3F02C89D15DD09CB00A3EAE4 /* NIControllerNotificationServer.m */,
+				3FDBEE5615DE5B6E006F73AF /* NIImageConversions.h */,
+				3FDBEE5715DE5B6E006F73AF /* NIImageConversions.m */,
+				3FFC763D15DE7707007083F3 /* TestImage.h */,
 			);
 			path = NICommon;
 			sourceTree = "<group>";
@@ -294,6 +302,7 @@
 				3F02C8B215DD09CB00A3EAE4 /* NIControllerNotificationServer.m in Sources */,
 				3FDBEE4D15DDFF6B006F73AF /* NIProtocolMessages.m in Sources */,
 				3FDBEE5115DDFF90006F73AF /* NIMessageBases.m in Sources */,
+				3FDBEE5815DE5B6E006F73AF /* NIImageConversions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +324,7 @@
 				3F02C8B315DD09CB00A3EAE4 /* NIControllerNotificationServer.m in Sources */,
 				3FDBEE4E15DDFF6B006F73AF /* NIProtocolMessages.m in Sources */,
 				3FDBEE5215DDFF90006F73AF /* NIMessageBases.m in Sources */,
+				3FDBEE5915DE5B6E006F73AF /* NIImageConversions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

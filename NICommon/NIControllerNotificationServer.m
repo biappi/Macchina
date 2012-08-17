@@ -8,11 +8,18 @@
 
 #import "NIControllerNotificationServer.h"
 #import "NIProtocolMessages.h"
+#import "NIAgentClient.h"
 
 @implementation NIControllerNotificationServer
 
 - (NSData *)handleNIDeviceStateChangeMessage:(NIDeviceStateChangeMessage *)stateChange;
 {
+    return nil;
+}
+
+- (NSData *)handleNISetFocusMessage:(NISetFocusMessage *)setFocus;
+{
+    [self.agentClient sendTestImage];
     return nil;
 }
 

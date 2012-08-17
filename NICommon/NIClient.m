@@ -44,7 +44,6 @@
                              &replyData);
     
     NSLog(@"%@ -> %@", name, message);
-    NSLog(@"%@ -> %@", name, [message dataRepresentation]);
     NSLog(@"%@ <- %@", name, replyData);
     NSLog(@" ");
     

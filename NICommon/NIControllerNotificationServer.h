@@ -8,6 +8,8 @@
 
 #import "NIServer.h"
 
-@interface NIControllerNotificationServer : NIServer
+@class NIAgentClient;
 
+@interface NIControllerNotificationServer : NIServer
+@property __weak NIAgentClient * agentClient;
 @end

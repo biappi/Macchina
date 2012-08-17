@@ -7,34 +7,26 @@
 //
 
 #import "NIAgentClient.h"
-#import "NIMainHandlerClient.h"
-#import "NIServer.h"
-#import "NIControllerRequestClient.h"
-#import "NIControllerNotificationServer.h"
+#import "NIImageConversions.h"
 
 @implementation NIAgentClient
-{
-    NIMainHandlerClient            * mainHandler;
-    NIControllerRequestClient      * requestClient;
-    NIControllerNotificationServer * notificationServer;
-}
 
 - (id)init;
 {
     if ((self = [super init]) == nil)
         return nil;
     
-    mainHandler = [[NIMainHandlerClient alloc] initWithName:@"NIHWMainHandler"];
+    _mainHandler = [[NIMainHandlerClient alloc] initWithName:@"NIHWMainHandler"];
     
     return self;
 }
 
 - (void)connect;
 {
-    NIDeviceConnectResponse * r = [mainHandler connectToControllerWithId:0x00000808
-                                                                     boh:'NiMS'
-                                                              clientRole:'prmy'
-                                                              clientName:@"Testing 123"];
+    NIDeviceConnectResponse * r = [self.mainHandler connectToControllerWithId:0x00000808
+                                                                          boh:'NiMS'
+                                                                   clientRole:'prmy'
+                                                                   clientName:@"Testing 123"];
     
     NSLog(@" - %@", r);
     NSLog(@" ");
@@ -42,11 +34,20 @@
     if (r.success == NO)
         return;
     
-    requestClient      = [[NIControllerRequestClient alloc]      initWithName:r.inPortName];
-    notificationServer = [[NIControllerNotificationServer alloc] initWithName:r.outPortName];
+    _requestClient      = [[NIControllerRequestClient alloc]      initWithName:r.inPortName];
+    _notificationServer = [[NIControllerNotificationServer alloc] initWithName:r.outPortName];
+    _notificationServer.agentClient = self;
     
-    [notificationServer scheduleInRunLoop:[NSRunLoop currentRunLoop]];
-    [requestClient setNotificationPortName:r.outPortName];
+    [_notificationServer scheduleInRunLoop:[NSRunLoop currentRunLoop]];
+    [_requestClient setNotificationPortName:r.outPortName];
+}
+
+- (void)sendTestImage;
+{
+    NIDisplayDrawMessage * m = TestImageDataMessage();
+    [_requestClient sendMessage:m];
+    m.displayNumber = 1;
+    [_requestClient sendMessage:m];
 }
 
 @end
