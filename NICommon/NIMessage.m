@@ -33,6 +33,7 @@ MessageIdToString MessageIdToStringTable[] = {
     { 0x02646742, @"NIGetDisplayBacklightMessage" },
     { 0x02566766, @"NIGetFloatPropertyMessage"    },
     { 0x02647344, @"NIDisplayDrawMessage"         },
+    { 0x02654e00, @"NIWheelsChangedMessage"       },
 };
 
 @implementation NIMessage

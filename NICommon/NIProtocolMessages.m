@@ -169,3 +169,55 @@
 }
 
 @end
+
+@implementation NIWheelsChangedEvent
+
+- (NSString *)description;
+{
+    return [NSString stringWithFormat:@"{%d, %f}", self.wheelId, self.delta];
+}
+
+@end
+
+@implementation NIWheelsChangedMessage
+
++ (NIMessage *)messageFromData:(NSData *)data;
+{
+    NIWheelsChangedMessage * m = [[self class] new];
+    const void * bytes = data.bytes;
+    
+    m.boh1   = *(uint32_t *)(bytes + 0x04);
+    m.boh2   = *(uint32_t *)(bytes + 0x08);
+    
+    uint32_t   numberOfEvents = *(uint32_t *)(bytes + 0x0c);
+    uint32_t * eventsList     =  (uint32_t *)(bytes + 0x10);
+    
+    NSMutableArray * events = [NSMutableArray arrayWithCapacity:numberOfEvents];
+    
+    for (int i = 0; i < numberOfEvents; i++)
+    {
+        NIWheelsChangedEvent * e = [NIWheelsChangedEvent new];
+        e.wheelId = eventsList[i * 2];
+        e.delta   = ((float *)eventsList)[i * 2 + 1];
+        [events addObject:e];
+    }
+    
+    m.events = events;
+    
+    return m;
+}
+
+- (NSString *)description;
+{
+    NSMutableArray * descs = [NSMutableArray arrayWithCapacity:self.events.count];
+    for (NIWheelsChangedEvent * e in self.events)
+        [descs addObject:[e description]];
+    
+    return [NSString stringWithFormat:@"%@ - boh1: %08x, boh2: %08x, [%@]",
+            [super description],
+            self.boh1,
+            self.boh2,
+            [descs componentsJoinedByString:@", "]];
+}
+
+@end

@@ -42,3 +42,14 @@
 @property uint16_t   sizeHeight;
 @property NSData   * st7529EncodedImage;
 @end
+
+@interface NIWheelsChangedEvent : NSObject
+@property uint32_t wheelId;
+@property float delta;
+@end
+
+@interface NIWheelsChangedMessage : NIMessage
+@property uint32_t   boh1;
+@property uint32_t   boh2;
+@property NSArray  * events;
+@end
