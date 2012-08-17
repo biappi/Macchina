@@ -20,4 +20,10 @@
     return [NSData dataWithBytes:&theTrue length:sizeof(theTrue)];
 }
 
+- (NSData *)handleNIGetDeviceAvailableMessage:(NIGetDeviceAvailableMessage *)message;
+{
+    uint32_t theTrue = 'true';
+    return [NSData dataWithBytes:&theTrue length:sizeof(theTrue)];
+}
+
 @end

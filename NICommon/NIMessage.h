@@ -23,7 +23,10 @@
 
 @interface NIGetServiceVersionMessage : NIMessage
 @end
-    
+
+@interface NIGetDeviceAvailableMessage : NIMessage
+@end
+
 @interface NIDeviceConnectMessage : NIMessage
 @property uint32_t   controllerId;
 @property uint32_t   boh;

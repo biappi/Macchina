@@ -14,11 +14,12 @@ typedef struct {
 } MessageIdToString;
 
 MessageIdToString MessageIdToStringTable[] = {
-    { 0x02536756, @"NIGetServiceVersionMessage" },
-    { 0x02444300, @"NIDeviceConnectMessage"     },
-    { 0x02404300, @"NISetAsciiStringMessage"    },
-    { 0x02446724, @"NIGetDeviceEnabledMessage"  },
-    { 0x02444e00, @"NIDeviceStateChangeMessage" },
+    { 0x02536756, @"NIGetServiceVersionMessage"  },
+    { 0x02444300, @"NIDeviceConnectMessage"      },
+    { 0x02404300, @"NISetAsciiStringMessage"     },
+    { 0x02446724, @"NIGetDeviceEnabledMessage"   },
+    { 0x02444e00, @"NIDeviceStateChangeMessage"  },
+    { 0x02446743, @"NIGetDeviceAvailableMessage" },
 };
 
 Class    ClassForMessageID(uint32_t messageId);
@@ -89,6 +90,21 @@ uint32_t MessageIDForClass(Class aClass);
 + (NIMessage *)messageFromData:(NSData *)data;
 {
     return [NIGetServiceVersionMessage new];
+}
+
+- (NSData *)dataRepresentation;
+{
+    uint32_t data = self.messageId;
+    return [NSData dataWithBytes:&data length:sizeof(data)];
+}
+
+@end
+
+@implementation NIGetDeviceAvailableMessage
+
++ (NIMessage *)messageFromData:(NSData *)data;
+{
+    return [NIGetDeviceAvailableMessage new];
 }
 
 - (NSData *)dataRepresentation;

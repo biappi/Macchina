@@ -413,6 +413,7 @@
 				3F02C87515DD07CA00A3EAE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F02C88415DD096300A3EAE4 /* Build configuration list for PBXNativeTarget "MacchinaServer" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +422,7 @@
 				3F02C88615DD096300A3EAE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
