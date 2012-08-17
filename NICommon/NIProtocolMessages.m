@@ -274,3 +274,52 @@
 }
 
 @end
+
+@implementation NILedState
+{
+    uint8_t state[57];
+}
+
+- (void)setLed:(uint8_t)led intensity:(uint8_t)intensity;
+{
+    if (led < sizeof(state)) state[led] = intensity;
+}
+
+- (uint8_t)getLedIntensity:(uint8_t)led;
+{
+    return (led < sizeof(state)) ? state[led] : 0;
+}
+- (NSData *)dataRepresentation;
+{
+    return [NSData dataWithBytes:state length:sizeof(state)];
+}
+
+@end
+
+@implementation NISetLedStateMessage
+
+- (NSData *)dataRepresentation;
+{
+    struct packet {
+        uint32_t msgid;
+        uint32_t n;
+    };
+    
+    struct packet p;
+    p.msgid = self.messageId;
+    p.n = 57;
+
+    NSMutableData * data = [NSMutableData dataWithBytes:&p length:sizeof(struct packet)];
+    [data appendData:[self.state dataRepresentation]];
+    
+    return data;
+}
+
+- (NSString *)description;
+{
+    return [NSString stringWithFormat:@"%@ - %@",
+            [super description],
+            [self.state dataRepresentation]];
+}
+
+@end

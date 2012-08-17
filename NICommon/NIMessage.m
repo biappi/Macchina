@@ -35,6 +35,7 @@ MessageIdToString MessageIdToStringTable[] = {
     { 0x02647344, @"NIDisplayDrawMessage"         },
     { 0x02654e00, @"NIWheelsChangedMessage"       },
     { 0x02504e00, @"NIPadsChangedMessage"         },
+    { 0x026c7500, @"NISetLedStateMessage"         },
 };
 
 @implementation NIMessage

@@ -65,3 +65,13 @@
 @property uint32_t   boh2;
 @property NSArray  * events;
 @end
+
+@interface NILedState : NSObject
+- (void)setLed:(uint8_t)led intensity:(uint8_t)intensity;
+- (uint8_t)getLedIntensity:(uint8_t)led;
+- (NSData *)dataRepresentation;
+@end
+
+@interface NISetLedStateMessage : NIMessage
+@property NILedState * state;
+@end

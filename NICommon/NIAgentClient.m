@@ -10,6 +10,10 @@
 #import "NIImageConversions.h"
 
 @implementation NIAgentClient
+{
+    NILedState * ledState;
+    int          curLed;
+}
 
 - (id)init;
 {
@@ -17,6 +21,7 @@
         return nil;
     
     _mainHandler = [[NIMainHandlerClient alloc] initWithName:@"NIHWMainHandler"];
+    ledState = [NILedState new];
     
     return self;
 }
@@ -45,9 +50,25 @@
 - (void)sendTestImage;
 {
     NIDisplayDrawMessage * m = TestImageDataMessage();
-    [_requestClient sendMessage:m];
+    [self.requestClient sendMessage:m];
     m.displayNumber = 1;
-    [_requestClient sendMessage:m];
+    [self.requestClient sendMessage:m];
+    [self ledtest];
+}
+
+- (void)ledtest;
+{
+    [ledState setLed:curLed - 1 intensity:0x00];
+    [ledState setLed:curLed     intensity:0x3f];
+    
+    curLed = (curLed + 1) % 57;
+    
+    NISetLedStateMessage * m = [NISetLedStateMessage new];
+    m.state = ledState;
+    
+    [self.requestClient sendMessage:m];
+    
+    [self performSelector:@selector(ledtest) withObject:nil afterDelay:0.5];
 }
 
 @end
