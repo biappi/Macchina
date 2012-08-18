@@ -97,14 +97,13 @@ didn't fry up, but I have just some knowledge of what I am doing.</p>
 <li>
 <p>Make sure NIHardwareAgent is running</p>
 
-<p><code>
-Selena:~ willy$ ps ax | grep NIHardwareAgent
+<pre><code>Selena:~ willy$ ps ax | grep NIHardwareAgent
 13487 s001  U      0:01.24 /Library/Application Support/Native
 Instruments/Hardware/NIHardwareAgent.app/Contents/MacOS/NIHardwareAgent
 13491 s001  R+     0:00.00 grep NIHardwareAgent
-Selena:~ willy$
-</code></p>
+Selena:~ willy$</code></pre>
 </li>
+
 <li><p>Run the target</p></li>
 <li><p>Close anything that might use your Maschine</p></li>
 <li><p>If it was not connected, connect the Maschine hardware controller</p></li>
@@ -119,7 +118,9 @@ Selena:~ willy$
 <li>Open some application that uses the Native Instrument controller</li>
 <li>Check the MacchinaServer logs for the detailed information on the underlying
 communication</li>
-</ol><h2>Legal</h2>
+</ol>
+
+<h2>Legal</h2>
 
 <p>Basically, you can do whatever you like with my works. Just do not expect they're perfect
 (they're far from it), so I can't give you any warranty of anything. Also, if you want to
