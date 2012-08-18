@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Macchina by biappi</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Macchina</h1>
+        <p>My experiments on reverse-engineering the Native Instruments Maschine hardware controller</p>
+
+        <p class="view"><a href="https://github.com/biappi/Macchina">View the Project on GitHub <small>biappi/Macchina</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/biappi/Macchina/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/biappi/Macchina/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/biappi/Macchina">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>This is my experimentation about reverse engineering the Native Instruments Maschine.</p>
+
+<p>The Maschine is a combination of a rhythm oriented software sampler, and a custom USB
+hardware controller that exposes most of the software features.</p>
+
+<h2>State of the project</h2>
+
+<p>Everything you see here is "proof of concept"-stage. Everything in this repository is
+meant for my entertainment purposes only, and it is <strong>NOT</strong> stable software.</p>
+
+<p>If you want, however, you can have the same fun I am having in working with this fun piece
+of hardware, even when you're not in a music-making mood.</p>
+
+<p>Currently with code contained in this repository you can connect to the Maschine USB
+controller, get the raw input of pads, knobs and switches, and set the state of the leds
+and, <em>yes</em>, upload images to the device's displays.</p>
+
+<p>One part that I've completely neglected in order to work on the fun part first is error
+handling and graceful termination. That means that frequent reboots of the various
+services are required, to get your system in a stable and predictable state.</p>
+
+<p>Patches and pull-requests are always welcome, of course =).</p>
+
+<h2>Other hardware controllers</h2>
+
+<p>It just happened that I had a Maschine laying around, but from my experimentation it seems
+that a lot of this work can be used to support any other Native Instruments hardware, with
+the required modifications.</p>
+
+<p>If you want, you can send me your favorite controller and I'll try to make it work ;).</p>
+
+<h2>Organization of the project</h2>
+
+<p>The project is intended to run in Mac OS X only.</p>
+
+<p>In the Xcode project you can find two targets:</p>
+
+<ul>
+<li>MacchinaClient, and</li>
+<li>MacchinaServer.</li>
+</ul><p>This reflects the organization of the Native Instrument's original software.</p>
+
+<p>MacchinaClient is a Mac commandline application that connects to the NIHardwareAgent
+daemon, waits for a Maschine controller to focus on it's instance, and then light up some
+leds and log the incoming messages.</p>
+
+<p>MacchinaServer, on the other end, is its dual. This application will expose to clients the
+same interface of NIHardwareAgent, and it will do the minimum in order to let clients such
+as the Maschine standalone or Maschine plugins, or even the Controller Editor to connect
+and log their requests.</p>
+
+<h2>Running the project</h2>
+
+<p>As I said, currently this is a proof of concept. If you don't understand this paragraph
+(and you can exclude it is not because of my english) I advise you to stop. My Maschine
+didn't fry up, but I have just some knowledge of what I am doing.</p>
+
+<h3>To run MacchinaClient (and enjoy a bit of light show)</h3>
+
+<ol>
+<li>Open the project in Xcode</li>
+<li>Select the client from the Scheme menu</li>
+<li>
+<p>Make sure NIHardwareAgent is running</p>
+
+<p>Selena:~ willy$ ps ax | grep NIHardwareAgent
+13487 s001  U      0:01.24 /Library/Application Support/Native
+Instruments/Hardware/NIHardwareAgent.app/Contents/MacOS/NIHardwareAgent
+13491 s001  R+     0:00.00 grep NIHardwareAgent
+Selena:~ willy$ </p>
+</li>
+<li><p>Run the target</p></li>
+<li><p>Close anything that might use your Maschine</p></li>
+<li><p>If it was not connected, connect the Maschine hardware controller</p></li>
+<li><p>In the Maschine controller, open the Instance menu and load it</p></li>
+</ol><h3>To run MacchinaServer (and take a look under the hood)</h3>
+
+<ol>
+<li>Close anything that might use your Maschine, or any other Native Instrument controller</li>
+<li>Make sure NIHardwareAgent is <strong>NOT</strong> running</li>
+<li>In Xcode, select the server from the scheme menu</li>
+<li>Run the target</li>
+<li>Open some application that uses the Native Instrument controller</li>
+<li>Check the MacchinaServer logs for the detailed information on the underlying
+communication</li>
+</ol><h2>Legal</h2>
+
+<p>Basically, you can do whatever you like with my works. Just do not expect they're perfect
+(they're far from it), so I can't give you any warranty of anything. Also, if you want to
+use my works in <em>your</em> work, I'd love to see it, but of course I can't force people to
+have my same choices, so I won't.</p>
+
+<p>So, the software in this repository is released under the MIT license, of which you can
+find a copy at the end of this document.</p>
+
+<h2>License</h2>
+
+<p>Copyright (c) 2012 Antonio Malara</p>
+
+<p>Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.</p>
+
+<h2>Cease and desist</h2>
+
+<p>If you, however, are a representative of Native Instruments particularly offended and
+bothered with my tinkering with my stuff developed by you, just send me a friendly note.</p>
+
+<p>Life is short to deal with litigations.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/biappi">biappi</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
