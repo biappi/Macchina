@@ -68,11 +68,10 @@ didn't fry up, but I have just some knowledge of what I am doing.
 2. Select the client from the Scheme menu
 3. Make sure NIHardwareAgent is running
 
-	Selena:~ willy$ ps ax | grep NIHardwareAgent
-	13487 s001  U      0:01.24 /Library/Application Support/Native
-Instruments/Hardware/NIHardwareAgent.app/Contents/MacOS/NIHardwareAgent
-	13491 s001  R+     0:00.00 grep NIHardwareAgent
-	Selena:~ willy$ 
+    Selena:~ willy$ ps ax | grep NIHardwareAgent
+    13487 s001  U      0:01.24 /Library/Application Support/Native Instruments/Hardware/NIHardwareAgent.app/Contents/MacOS/NIHardwareAgent
+    13491 s001  R+     0:00.00 grep NIHardwareAgent
+    Selena:~ willy$ 
 
 4. Run the target
 5. Close anything that might use your Maschine
